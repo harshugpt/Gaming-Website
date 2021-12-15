@@ -13,6 +13,7 @@ body{
     background: url("images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     min-height: 500px;
 }
@@ -60,6 +61,14 @@ body{
     animation: animate 2s linear infinite alternate;
 }
 @keyframes animate{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(20%) scale(1.1);
+    }
+}
+/*@keyframes animate{
     0%{
         visibility: hidden;
     }
@@ -69,7 +78,7 @@ body{
     100%{
         transform: translateX(10%) scale(1.2);
     }
-}
+}*/
 .navbar .menu li{
     list-style: none;
     display: inline-block;
@@ -94,6 +103,72 @@ body{
 .btn:hover{
     color: brown;
 }
+/*halls section starts*/
+.hall{
+    display: flex;
+    height: 100vh;
+    min-height: 500px;
+}
+.hall .max-width{
+    padding: auto 0 auto 40px;
+}
+.hall .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.hall .main p{
+    color: #FFF;
+    font-size: 45px;
+    font-weight: 500;
+    animation: animate2 2s;
+}
+@keyframes animate2{
+    from{
+        transform: translateX(-25%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+
+}
+.hall .main button{
+    width: 180px;
+    height: 50px;
+    color: #111;
+    background-color: rgb(236, 132, 100);
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 30px;
+    border: 2px solid brown;
+    border-radius: 20px;
+    animation: animate3 2s;
+}
+@keyframes animate3{
+    from{
+        transform: translateY(15vh);
+    }
+    to{
+        transform: translateY(0vh);
+    }
+
+}
+.hall .main button:hover{
+    background-color: brown;
+    color: rgb(185, 155, 155);
+    box-shadow: 0 0 5px 5px brown;
+}
+.games{
+    background: #fff;
+    height: 100vh;
+}
+.games .vd{
+}
+section{
+    padding: 100px 0;
+}
+
 
 
 
