@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Licorice&family=Love+Light&family=Permanent+Marker&family=Playfair+Display:wght@400;500&family=Poiret+One&display=swap');
 *{
     margin:0;
     padding:0;
@@ -27,7 +27,6 @@ body{
     width: 100%;
     z-index: 999;
     padding: 10px 0;
-    font-family: 'Permanent Marker', cursive;
     transition: all 0.2s ease-in;
 }
 .navbar .max-width{
@@ -51,57 +50,58 @@ body{
     border-radius: 25px;
     transform: scale(1.1);
 }
-.navbar .logo span{
-    color: brown;
+.navbar .logo pre{
+    color: whitesmoke;
     font-size: 35px;
     font-weight: 600;
+    font-family: 'Poiret One', cursive;
     padding-left: 20px;
     cursor: pointer;
-    transform-origin: left;
-    animation: animate 2s linear infinite alternate;
+    animation: animate 2.5s linear infinite alternate;
+}
+.navbar .logo .a1{
+    color: crimson;
 }
 @keyframes animate{
-    from{
-        transform: translateX(0%);
-    }
-    to{
-        transform: translateX(20%) scale(1.1);
-    }
-}
-/*@keyframes animate{
     0%{
-        visibility: hidden;
+        transform: rotateX(0deg);
     }
     50%{
-        transform-origin: -30px;
+        transform: rotateX(90deg) translateX(15px) translateY(30px);
     }
     100%{
-        transform: translateX(10%) scale(1.2);
+        transform: rotateX(180deg) translateX(30px);
     }
-}*/
+}
 .navbar .menu li{
     list-style: none;
     display: inline-block;
+    padding-right: 20px;
 }
 .navbar .menu li a{
     display: block;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Advent Pro', sans-serif;
     color: #fff;
-    padding-left: 30px;
-    transition: color 0.3s ease;
+    padding: 8px 20px;
+    transition: all 1s ease;
 }
 .navbar .menu li a:hover{
+    border-radius: 1020px;
     color: brown;
+    background-color: white;
 }
 .btn{
     color: #fff;
     font-size: 25px;
     display: none;
     cursor: pointer;
+    transition: all 0.3s ease-in;
 }
 .btn:hover{
     color: brown;
+    transform: scale(1.1);
 }
 /*halls section starts*/
 .hall{
@@ -159,6 +159,26 @@ body{
     color: rgb(185, 155, 155);
     box-shadow: 0 0 5px 5px brown;
 }
+.hall .social{
+    position: absolute;
+    right: 60px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.hall .social li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+.hall .social li a i{
+    font-size: 30px;
+    color: #fffff0;
+    transition: all 0.3s ease-in;
+}
+.hall .social li a:hover i{
+    color: crimson;
+    transform: scale(1.5);
+}
 .games{
     background: #fff;
     height: 100vh;
@@ -186,6 +206,9 @@ section{
     }
 }
 @media(max-width: 947px){
+    .navbar .menu{
+        display: none;
+    }
     .btn{
         color: #fff;
         display: block;
